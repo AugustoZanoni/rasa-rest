@@ -20,6 +20,7 @@ const Chat = () => {
             id: msgId,            
             sent: false,
             error: false,
+            date: new Date(),
             message: msg
           }]);
           
@@ -58,7 +59,9 @@ const Chat = () => {
                 {messages.map(msg => {
                     return (
                         <Box key={`box${msg.id}`}>
+                            <Box width='fit-content' marginBottom={1} marginLeft='auto'> {msg.date?.toLocaleTimeString(undefined, { timeStyle: 'short' })} </Box>
                             <Box key={msg.id} sx={{ wordWrap: 'break-word', textAlign: 'end' }} width='fit-content' bgcolor='lightblue' padding={1} borderRadius='15px 0 15px 15px' marginBottom={1} marginLeft='auto'>{msg.message}</Box>
+                            {msg.answer && <Box> {msg.date?.toLocaleTimeString(undefined, { timeStyle: 'short' })} </Box>}
                             {msg.answer?.map((answer, i) => <Box key={`a${i}${msg.id}`} sx={{ wordWrap: 'break-word' }} width='fit-content' bgcolor='lightgrey' padding={1} borderRadius='0 15px 15px 15px' marginBottom={1}>{answer.text}</Box>)}
                         </Box>
                     )

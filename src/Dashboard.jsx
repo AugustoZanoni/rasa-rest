@@ -9,6 +9,7 @@ function DrawerAppBar() {
         <Box sx={{ display: 'flex' }}>
             <AppBar component="nav">
                 <Toolbar>
+                    <img width='10%' src={process.env.PUBLIC_URL + '/daia_logo.png'} alt='DAIA'/>
                     <Typography
                         variant="h6"
                         component="div"
