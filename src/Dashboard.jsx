@@ -7,10 +7,11 @@ import Chat from './Chat';
 function DrawerAppBar() {
     return (
         <Box sx={{ display: 'flex' }}>
-            <AppBar component="nav">
+            <AppBar sx={{bgcolor: 'rgb(244,236,224)'}} component="nav">
                 <Toolbar>
                     <img width='10%' src={process.env.PUBLIC_URL + '/daia_logo.png'} alt='DAIA'/>
                     <Typography
+                        color='black'
                         variant="h6"
                         component="div"
                         sx={{ flexGrow: 1 }}
