@@ -11,10 +11,10 @@ function DrawerAppBar() {
                 <Toolbar>
                     <img width='10%' src={process.env.PUBLIC_URL + '/daia_logo.png'} alt='DAIA'/>
                     <Typography
-                        color='black'
+                        color='#5A021F'
                         variant="h6"
                         component="div"
-                        sx={{ flexGrow: 1 }}
+                        sx={{ flexGrow: 1 }}                        
                     >
                         Chatbot Lei de Direito Autoral
                     </Typography>
