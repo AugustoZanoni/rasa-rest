@@ -5,11 +5,11 @@ import ChatInput from './components/ChatInput';
 
 const Chat = () => {
     const [messages, setMessages] = useState([]);
-    const boxMessages = useRef()
+    const boxMessages = useRef();
     
     useEffect(() => {
         if (boxMessages.current) boxMessages.current.scrollTop = boxMessages.current.scrollHeight;
-    }, [messages])
+    }, [messages]);
 
     const sendMessageBot = async (msg) => {
         const msgId = uuidv4();
@@ -74,6 +74,11 @@ const Chat = () => {
             }}
                 flexDirection='column' flexGrow={1} padding={2} height='73vh' maxHeight='80%' >
 
+                <Box>
+                    <Box sx={{ wordWrap: 'break-word' }} width='fit-content' bgcolor='lightgrey' padding={1} borderRadius='0 15px 15px 15px' marginBottom={1}>
+                        Olá! Eu sou DAIA - Direito Autoral de Inteligência Artificial. Posso tirar suas dúvidas relacionadas a lei n. 9.610/98 - Lei brasileira sobre Direitos autorais.
+                    </Box>
+                </Box>
                 {messages.map(msg => {
                     return (
                         <Box key={`box${msg.id}`}>
